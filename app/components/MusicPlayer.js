@@ -8,7 +8,6 @@ const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef(null);
 
-  
   useEffect(() => {
     async function fetchTracks() {
       try {
@@ -25,8 +24,6 @@ const MusicPlayer = () => {
     fetchTracks();
   }, []);
 
- 
-  
   useEffect(() => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -70,7 +67,6 @@ const MusicPlayer = () => {
       };
     }
   }, [handleNextTrack]);
-
 
   return (
     <div className=" m-2  justify-center items-center bg-white rounded-lg shadow-md">
